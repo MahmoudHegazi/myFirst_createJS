@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EaselJS demo: Getting started</title>
+	<link href="../_shared/demo.css" rel="stylesheet" type="text/css">
+	<script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+	<script>
+    
+
+    
+               /*  Move Right change X */
+            let firstShape_moveRightX = 100;
+            let secondShape_moveRightX = 120;
+            let thirdShape_moveRightX = 140;           
+            let moveRight = [firstShape_moveRightX, secondShape_moveRightX,  thirdShape_moveRightX];
+            /* end */
+                        
+            /*  Move forward left change X */
+            let firstShape_leftX = 0;  
+            let secondShape_leftX = 20;
+            let thirdShape_leftX = 40;     
+            let moveLeft = [firstShape_leftX, secondShape_leftX, thirdShape_leftX];
+            /* end */
+            
+            
+            /* Look Down Change Y notX*/
+            let firstShape_downY = 0;  
+            let secondShape_downY = 20; 
+            let thirdShape_downY = 40;          
+            let faceDown = [firstShape_downY, secondShape_downY, thirdShape_downY];             
+            /* end */
+            
+            /* Look Up Change Y notX*/
+            let firstShape_upY = -40;  
+            let secondShape_upY = -20; 
+            let thirdShape_upY = 0;          
+            let faceUp = [firstShape_upY, secondShape_upY, thirdShape_upY];             
+            /* end */
+            
+            
+           /* back facing right x*/
+            let firstShape_rightY = 0;  
+            let secondShape_rightY = 20; 
+            let thirdShape_rightY = 40;          
+            let faceRight = [firstShape_rightY, secondShape_rightY, thirdShape_rightY];             
+            /* end */
+            
+            /* reverse x*/
+            let firstShape_reverseY = 40;  
+            let secondShape_reverseY = 20; 
+            let thirdShape_reverseY = 0;          
+            let myreverse = [firstShape_reverseY, secondShape_reverseY, thirdShape_reverseY];             
+            /* end */ 
+    
+            
+            
+		function init() {
+
+            var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("green").drawCircle(0, 0, 10);
+            circle.graphics.beginFill("red").drawCircle(20, 0, 10);
+            circle.graphics.beginFill("red").drawCircle(40, 0, 10);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+			// stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
+			stage.update(); 
+              var canvas = document.getElementById("demoCanvas");
+             var ctx = canvas.getContext("2d");
+             
+             ctx.font = "10px Arial";
+             ctx.fillText("Ready to Start",400,80);
+            
+
+
+            
+
+
+}
+
+            function clirclez() {
+
+
+            
+            
+            var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("green").drawCircle(firstShape_rightY, -40, 10);
+            circle.graphics.beginFill("red").drawCircle(secondShape_rightY, -20, 10);
+            circle.graphics.beginFill("red").drawCircle(thirdShape_rightY, 0, 10);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+			// stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
+			stage.update();   
+            };
+            
+            function lright() {
+
+
+            
+            
+            var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("red").drawCircle(0, 0, 10);
+            circle.graphics.beginFill("red").drawCircle(20, 0, 10);
+            circle.graphics.beginFill("green").drawCircle(40, 0, 10);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+			// stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
+			stage.update();
+            var canvas = document.getElementById("demoCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "16px lemon";
+            ctx.fillText("looking Right",400,80);
+            document.getElementById('tic').play();
+            };
+            
+            
+            function lleft() {
+
+
+            
+            
+            var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("green").drawCircle(-40, 0, 10);
+            circle.graphics.beginFill("red").drawCircle(-20, 0, 10);
+            circle.graphics.beginFill("red").drawCircle(0, 0, 10);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+			// stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
+			stage.update();
+            var canvas = document.getElementById("demoCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "16px lemon";
+            ctx.fillText("looking left",400,80); 
+            
+            document.getElementById('tic').play();
+            };
+            
+            function lup() {
+
+
+            
+            
+            var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("green").drawCircle(0, firstShape_upY, 10);
+            circle.graphics.beginFill("red").drawCircle(0, secondShape_upY, 10);
+            circle.graphics.beginFill("red").drawCircle(0, thirdShape_upY, 10);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+			// stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
+			stage.update();
+            var canvas = document.getElementById("demoCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "16px lemon";
+            ctx.fillText("looking Up",400,80);             
+            document.getElementById('tic').play();
+            };
+            
+
+            
+           
+         function mright() {
+           
+            
+            var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("red").drawCircle(firstShape_moveRightX, 0, 10);
+            circle.graphics.beginFill("red").drawCircle(secondShape_moveRightX, 0, 10);
+            circle.graphics.beginFill("green").drawCircle(thirdShape_moveRightX, 0, 10);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+            stage.update();
+            var canvas = document.getElementById("demoCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "16px lemon";
+            ctx.fillText("Moving right",400,80);            
+			// stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
+			   
+            };
+            
+           function mleft() {
+
+
+            
+            
+            var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("green").drawCircle(moveLeft[0], 0, 10);
+            circle.graphics.beginFill("red").drawCircle(moveLeft[1], 0, 10);
+            circle.graphics.beginFill("red").drawCircle(moveLeft[2], 0, 10);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+            stage.update();
+            var canvas = document.getElementById("demoCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "16px lemon";
+            ctx.fillText("Moving left",400,80); 
+			// stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
+			   
+            };
+            
+            
+                        
+           function ldown() {
+           
+            var stage = new createjs.Stage("demoCanvas");
+			var circle = new createjs.Shape();
+			circle.graphics.beginFill("green").drawCircle(0, faceDown[0], 10);
+            circle.graphics.beginFill("red").drawCircle(0, faceDown[1], 10);
+            circle.graphics.beginFill("red").drawCircle(0, faceDown[2], 10);
+			circle.x = 100;
+			circle.y = 100;
+			stage.addChild(circle);
+			// stage.addChild(new createjs.Shape()).setTransform(100,100).graphics.f("red").dc(0,0,50);
+			stage.update();
+            var canvas = document.getElementById("demoCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.font = "16px lemon";
+            ctx.fillText("looking Down",400,80);             
+            document.getElementById('tic').play();
+            };
+            
+
+	</script>
+    <style>
+      body {
+        background-color: black;
+      }
+      #demoCanvas {
+        background-color: white;
+
+
+      }
+      #myContainer {
+        background-color: white;
+        width: 50%;
+        margin-left: 20%;
+        background-color: gold;
+        text-align: center;
+
+      }
+      button {
+        padding: 5px;
+        background-color: crimson;
+        color: white;
+        border: none;
+        border-radius: 8%;
+      }
+      button:hover {
+        opacity: .7;
+      }
+    </style>
+
+</head>
+<body onload="init();">
+	<canvas id="demoCanvas" width="500" height="200" style="margin-left:20%;">
+		alternate content
+	</canvas>
+
+<br /><br /><br />
+<div id="myContainer" style="">
+    <h2>You Can use the Arrow Keys</h2>
+    <p>Click Here and Start move your keyboard arrow <br /> or use buttons</p>
+    <div class="controller2">
+    <button id="mybtn" onclick="clirclez()">rotate quarter</button>   
+    <button id="mybtn" onclick="mleft()">Move Left</button>        
+    <button id="mybtn" onclick="mright()">Move Right</button>
+    </div>
+    
+    <br />
+    <div class="myButtons">
+    <button id="mybtn" onclick="lleft()">Look Left</button>
+    <button id="mybtn" onclick="lup()">Look Up</button>
+    <button id="mybtn" onclick="ldown()">Look Down</button>    
+    <button id="mybtn" onclick="lright()">Look Right</button>
+   </div>
+
+<audio id="tic" style="display:none;">
+  <source src="https://raw.githubusercontent.com/MahmoudHegazi/hello-world/master/tik.mp3" type="audio/mp3">
+
+Your browser does not support the audio element.
+</audio>
+
+
+
+<audio id="starting" style="display:none;">
+  <source src="https://raw.githubusercontent.com/MahmoudHegazi/hello-world/master/caropen.mp3" type="audio/mp3">
+
+Your browser does not support the audio element.
+</audio>
+<script>
+myIndex = 0;
+/* KeyBoard Controls */
+
+var addEvent = document.addEventListener ? function(target,type,action){
+    if(target){
+        target.addEventListener(type,action,false);
+    }
+} : function(target,type,action){
+    if(target){
+        target.attachEvent('on' + type,action,false);
+    }
+}
+
+addEvent(document,'keydown',function(e){
+    e = e || window.event;
+    var key = e.which || e.keyCode;
+    if(key===37){
+        lleft();
+
+    } else if (key === 38) { 
+        lup();
+
+    } else if (key === 39) {
+        lright();
+
+    } else if (key === 40) {
+        ldown();
+
+    } 
+      
+});
+
+/*End Of Keyboard Controls */
+
+/* sound in the begining */
+
+document.getElementById("myContainer").addEventListener('mouseenter', function() {
+  document.getElementById("starting").play();
+});
+
+/*
+document.getElementById("myContainer").addEventListener('mouseenter', function() {
+  if (myIndex === 0) {
+  alert("please Note You Can Use KeyBoard Arrow to move");
+  myIndex += 1;
+  }
+});*/
+</script>
+</div>
+</body>
+</html>
